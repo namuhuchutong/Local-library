@@ -16,7 +16,7 @@ class Genre(models.Model):
         return self.name
 
 class Language(models.Model):
-    name = models.CharFeild(
+    name = models.CharField(
         max_length=200,
         help_text="Input a book's language"
     )
@@ -50,7 +50,7 @@ class Book(models.Model):
     )
     author = models.ForeignKey(
         Author, 
-        on_delete=models.SEt_NULL, 
+        on_delete=models.SET_NULL, 
         null=True
     )
     isbn = models.CharField(
@@ -129,6 +129,6 @@ class BookInstance(models.Model):
         return False
     
     class Meta:
-        ordering = ['due_bakc']
+        ordering = ['due_back']
         permissions = (("can_mark_returned", "Set book as returned"),)
 
