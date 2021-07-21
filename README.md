@@ -10,3 +10,9 @@ Local library project using django framework.
     <li> Admin users can create and manage models.
     <li> Librarians can renew reserved books
 </ul>
+
+## To-do
+
+<ul>
+    <li> Build test cases
+</ul>
