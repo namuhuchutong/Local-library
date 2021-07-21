@@ -1,0 +1,10 @@
+*.sqlite3
+
+library/__pycache__
+library/migrations
+
+LocalLibrary/__pyacche__/*.*
+
+*.cpython
+*.pyc
+__pycache__
