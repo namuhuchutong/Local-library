@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="list-group">
+    <p class="h1">Author List</p>
+
+    {% if object_list %}
+
+    {% for author in object_list %}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">{{ author.name }}</div>
+                born : {{ author.date_of_birth }}<br>
+                died : {{ author.date_of_death }}
+            </div>
+        </li> 
+    {% endfor %}
+
+    {% else %}
+        <p class="h2">There is no Authors</p>
+    {% endif %}
+</div>
+
+{% endblock %}
