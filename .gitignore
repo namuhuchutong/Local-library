@@ -5,6 +5,7 @@ library/migrations
 
 LocalLibrary/__pyacche__/*.*
 
+*.DS_Store
 *.cpython
 *.pyc
 __pycache__
