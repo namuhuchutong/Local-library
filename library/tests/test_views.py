@@ -1,3 +1,4 @@
+from django.http import response
 from django.test import TestCase
 from django.urls import reverse
 
@@ -60,3 +61,23 @@ class BookListViewTest(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['object_list']), 10)
+
+
+class IndexViewTest(TestCase):
+    
+    def setUp(self):
+        pass
+
+    def test_url_exists(self):
+        response = self.client.get(reverse('index'))
+        self.assertEqual(response.status_code, 200)
+
+
+class AuthorDetailViewTest(TestCase):
+
+    def setUp(self):
+        Author_ = Author.objects.create(name="tester") 
+
+    def test_url_exists(self):
+        response = self.client.get(reverse('author-detail', kwargs={'pk':1}))
+        self.assertEqual(response.status_code, 200)
